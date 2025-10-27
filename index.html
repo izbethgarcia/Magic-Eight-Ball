@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Lizbeth Garcia">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Eight Ball</title> 
+</head>
+<body>
+
+  <h1> Welcome to Magic Eight Ball</h1>
+  <div class="ball">🎱</div>
+  
+  <p> Ready to discover your future? Ask yes or no questions and find the hidden truth!</p>
+
+  <script>
+    //welcome banner
+    alert("Welcome to the Magic Eight Ball!");
+
+    // Magic eight ball answers
+    let answers = [
+      "Yes!! ",
+      "No and you know it ",
+      "Maybe, keep on trying",
+      "Absolutely! The universe knows it",
+      "How about not",
+      "Without a doubt ",
+      "Sure whats there to loose",
+      "Hmmm, I think you know the answer to that"
+    ];
+    //keep playing or done
+    let keepPlaying = true;
+
+    while (keepPlaying === true) {
+      let question = prompt("Ready to discover your future? Ask a yes or no question and find the hidden truth! Once receiving all the universe answers, type im done ");
+
+      if (question === null || question.toLowerCase() === "im done") {
+        alert("Goodbye and best of luck! You'll need it");
+        keepPlaying = false;
+      }
+      else {
+        // eight ball random answers
+        let randomNumber = Math.floor(Math.random() * answers.length);
+        let randomAnswer = answers[randomNumber];
+
+        // show eight ball answer
+        alert("The Magic Eight Ball says:\n" + randomAnswer);
+      }
+    }
+  </script>
+ <style>
+  
+    body {
+      background-color: black;
+      color: purple;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding-top: 100px;
+    }
+    p {
+      color:#FF6347;
+    }
+
+    h1 {
+      color: #FF6347;
+    }
+
+  </style>
+
+</body>
+</html>
